@@ -10,7 +10,7 @@ This is a RESTful API that allows users to play Rock, Paper, Scissors. The API i
 `git clone https://github.com/karin-maria/rock_paper_scissors_api.git`
 2. Open a terminal window and navigate to the root of the cloned repository.
 3.  Alt 1: Run the server from the application folder with `./gradlew bootRun`
-    Alt. 2: Build the jar file with `./gradlew build` and run it with `java -jar build/libs/games-0.0.1-SNAPSHOT.jar`
+    Alt. 2: Build the jar file with `./gradlew build` and run it with `java -jar build/libs/game_controllers-0.0.1-SNAPSHOT.jar`
 
     The server starts and runs on http://localhost:8080
 
