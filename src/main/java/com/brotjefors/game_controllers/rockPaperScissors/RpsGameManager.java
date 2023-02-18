@@ -102,6 +102,9 @@ public class RpsGameManager implements IGameManager {
         if (game == null || !game.isFull()) {
             return createResponse("Game is not ready to make a move.", false);
         }
+        if(!game.getPlayers().containsKey(player.getName())){
+            return createResponse("Player not in game", false);
+        }
         Move move = Move.UNDETERMINED;
         try {
             move = Move.valueOf(player.getMove());

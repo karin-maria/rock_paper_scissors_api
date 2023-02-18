@@ -83,6 +83,16 @@ public class RpsGameManagerTest {
     }
 
     @Test
+    public void testMakeMoveInvalidPlayer() {
+        RpsGameManager manager = new RpsGameManager();
+        UUID gameId = manager.createGame(new Player("Karin"));
+        manager.joinGame(gameId, new Player("Emil"));
+        Object[] response = manager.makeMove(gameId, new Player("Ludvig", "ROCK"));
+        Boolean status = (Boolean)response[1];
+        assertFalse(status);
+    }
+
+    @Test
     public void testMakeMoveWithOnePlayer() {
         RpsGameManager manager = new RpsGameManager();
         UUID gameId = manager.createGame(new Player("Karin"));
